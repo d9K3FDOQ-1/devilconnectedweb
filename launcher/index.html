@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Devil Connection — launcher</title>
+    <meta name="author" content="https://t.me/oodze" />
+    <link rel="stylesheet" href="./launcher.css" />
+  </head>
+  <body>
+    <div class="art"></div>
+    <main class="wrap">
+      <h1>Devil Connection</h1>
+      <p class="sub">Онлайн-лаунчер. Движок с GitHub Pages, ассеты — архивы <code>.dca</code>.</p>
+
+      <section class="panel">
+        <label for="cdn">CDN / зеркало архивов</label>
+        <input
+          id="cdn"
+          type="url"
+          placeholder="https://pub-f84055bf661a408ea50c34e77905b424.r2.dev/dca/"
+          spellcheck="false"
+        />
+
+        <div class="row">
+          <button type="button" id="download">Скачать архивы</button>
+          <button type="button" id="play" class="ghost" disabled>Играть</button>
+          <button type="button" id="wipe" class="ghost">Снести кэш</button>
+        </div>
+
+        <div class="bar"><span id="bar-pack"></span></div>
+        <div class="bar"><span id="bar-total"></span></div>
+        <p id="status" class="status">Загрузка манифеста…</p>
+        <p id="total-label" class="status"></p>
+        <ul id="packs" class="packs"></ul>
+
+        <p class="hint">
+          Формат <strong>DCA1</strong> — свой контейнер (не zip): TOC + сырые файлы, куски ≈ 350&nbsp;MB.
+          Хостинг архивов должен отдавать CORS (<code>Access-Control-Allow-Origin</code>) и желательно
+          <code>Accept-Ranges: bytes</code>. GitHub Pages тянет только лаунчер и Tyrano, не 6&nbsp;GB спрайтов.
+          Нужен Chrome / Edge: архивы лежат в Origin Private File System.
+        </p>
+      </section>
+
+      <footer class="contacts">
+        <p>не вайбкод, всё сам</p>
+        <p>
+          контакт:
+          <a href="https://t.me/oodze" target="_blank" rel="noopener noreferrer">https://t.me/oodze</a>
+        </p>
+      </footer>
+    </main>
+    <script src="./dca-format.js"></script>
+    <script src="./launcher.js"></script>
+  </body>
+</html>

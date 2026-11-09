@@ -1,0 +1,15 @@
+**/node_modules/
+dist/
+resources/asar/data/fgimage/
+resources/asar/data/image/
+resources/asar/data/bgimage/
+resources/asar/data/bgm/
+resources/asar/data/video/
+resources/asar/data/sound/
+resources/asar/_storage/
+*.exe
+*.dll
+*.pak
+*.log
+.DS_Store
+Thumbs.db

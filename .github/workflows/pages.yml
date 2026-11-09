@@ -1,0 +1,57 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build launcher site (no .dca payloads)
+        env:
+          DCA_CDN_BASE: ${{ vars.DCA_CDN_BASE }}
+        run: |
+          set -euo pipefail
+          if [ -d resources/asar ]; then
+            SRC=resources/asar
+          elif [ -f index_browser.html ]; then
+            SRC=.
+          else
+            echo "Game engine not found"
+            exit 1
+          fi
+          MANIFEST_ARGS=()
+          if [ -f dca-manifest.json ]; then
+            MANIFEST_ARGS+=(--manifest dca-manifest.json)
+          fi
+          python3 tools/build_site.py \
+            --src "$SRC" \
+            --launcher launcher \
+            --out site \
+            --cdn-base "${DCA_CDN_BASE:-}" \
+            "${MANIFEST_ARGS[@]}"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

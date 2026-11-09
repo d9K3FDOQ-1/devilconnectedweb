@@ -1,0 +1,431 @@
+﻿TYRANO.kag.dc = {
+  ...TYRANO.kag.dc,
+  gekizyouNumbers: [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 31, 32, 33, 38, 39, 40, 41, 42, 43, 44,
+  ],
+  /**
+   * name: 一意な名前（解禁に使う）
+   * title: タイトル
+   * storages: dataフォルダを起点としたパス
+   * （nameと同じ名前で
+   *   image/collection_omake/gallery/thumbの中に入れること）
+   */
+  galleryData: (start = 0, len = Number.MAX_SAFE_INTEGER) => {
+    const data = [
+      {
+        name: 'kupya_kaisou',
+        title: 'Kupyadoel\'s Past',
+        storages: [
+          'bgimage/kupya_kaisou1.webp',
+          'bgimage/kupya_kaisou2.webp',
+          'bgimage/kupya_kaisou3.webp',
+          'bgimage/kupya_kaisou4.webp',
+          'bgimage/kupya_kaisou5.webp',
+        ],
+      },
+      {
+        name: 'JU',
+        title: 'Jewelry Pink\'s Past',
+        storages: [
+          'bgimage/JU1.webp',
+          'bgimage/JU2.webp',
+          'bgimage/JU3.webp',
+          'bgimage/JU4.webp',
+          'bgimage/JU5.webp',
+        ],
+      },
+      {
+        name: 'fuga_kaisou',
+        title: 'Fuuga\'s Past',
+        storages: [
+          'bgimage/fuga_kaisou1.webp',
+          'bgimage/fuga_kaisou2.webp',
+          'bgimage/fuga_kaisou3.webp',
+        ],
+      },
+      {
+        name: 'Lamia',
+        title: 'Lamia\'s Trauma',
+        storages: [
+          'bgimage/Lamia_1.webp',
+          'bgimage/Lamia_2.webp',
+          'bgimage/Lamia_3.webp',
+        ],
+      },
+      {
+        name: 'BBB_1',
+        title: 'BBB\'s Memories',
+        storages: [
+          'bgimage/BBB3.webp',
+          'bgimage/BBB4.webp',
+          'bgimage/BBB5.webp',
+          'bgimage/BBB6.webp',
+          'bgimage/BBB7.webp',
+          'bgimage/BBB8.webp',
+          'bgimage/BBB9.webp',
+          'bgimage/BBB10.webp',
+          'bgimage/BBB11.webp',
+          'bgimage/BBB12.webp',
+          'bgimage/BBB13.webp',
+          'bgimage/BBB14.webp',
+          'bgimage/BBB15.webp',
+          'bgimage/BBB16.webp',
+        ],
+      },
+      {
+        name: 'BBB_2',
+        title: 'Forgetting Everything',
+        storages: ['bgimage/BBB1.webp', 'bgimage/BBB2.webp'],
+      },
+      {
+        name: 'DE',
+        title: '<span style="font-family:KaiseiDecol-Bold">Prequel</span>　',
+        storages: [
+          'bgimage/DE1.webp',
+          'bgimage/DE2.webp',
+          'bgimage/DE3.webp',
+          'bgimage/DE4.webp',
+          'bgimage/DE5.webp',
+          'bgimage/DE6.webp',
+          'bgimage/DE7.webp',
+          'bgimage/DE8.webp',
+          'bgimage/DE9.webp',
+          'bgimage/DE10.webp',
+          'bgimage/DE11.webp',
+          'bgimage/DE12.webp',
+          'bgimage/DE13.webp',
+          'bgimage/DE14.webp',
+          'bgimage/DE15.webp',
+          'bgimage/DE16.webp',
+          'bgimage/DE17.webp',
+          'bgimage/DE18.webp',
+          'bgimage/DE19.webp',
+          'bgimage/DE20.webp',
+          'bgimage/DE21.webp',
+          'bgimage/DE22.webp',
+          'bgimage/DE23.webp',
+          'bgimage/DE24.webp',
+          'bgimage/DE26.webp',
+        ],
+      },
+      {
+        name: 'me',
+        title: 'Devilun\'s Swan Song',
+        storages: [
+          'bgimage/me1.webp',
+          'bgimage/me2.webp',
+          'bgimage/me3.webp',
+          'bgimage/me4.webp',
+          'bgimage/me5.webp',
+          'bgimage/me6.webp',
+        ],
+      },
+      {
+        name: 'kaisou',
+        title: 'Devilun\'s Memories',
+        storages: [
+          'image/collection_omake/gallery/d/kaisou1.webp',
+          'image/collection_omake/gallery/d/kaisou2.webp',
+          'image/collection_omake/gallery/d/kaisou3.webp',
+          'image/collection_omake/gallery/d/kaisou4.webp',
+          'image/collection_omake/gallery/d/kaisou5.webp',
+          'image/collection_omake/gallery/d/kaisou6.webp',
+          'image/collection_omake/gallery/d/kaisou7.webp',
+          'image/collection_omake/gallery/d/kaisou8.webp',
+          'image/collection_omake/gallery/d/kaisou9.webp',
+        ],
+      },
+      {
+        name: 'end',
+        title: 'True Ending',
+        storages: [
+          'image/collection_omake/gallery/d/end1.webp',
+          'image/collection_omake/gallery/d/end2.webp',
+          'image/collection_omake/gallery/d/end3.webp',
+          'image/collection_omake/gallery/d/end4.webp',
+          'image/collection_omake/gallery/d/end5.webp',
+          'image/collection_omake/gallery/d/end6.webp',
+          'image/collection_omake/gallery/d/end7.webp',
+          'image/collection_omake/gallery/d/end8.webp',
+          'image/collection_omake/gallery/d/end9.webp',
+          'image/collection_omake/gallery/d/end10.webp',
+          'image/collection_omake/gallery/d/end11.webp',
+        ],
+      },
+      {
+        name: 'BBB_3',
+        title: 'BBB\'s Past',
+        storages: [
+          'bgimage/BBB17.webp',
+          'bgimage/BBB18.webp',
+          'bgimage/BBB19.webp',
+        ],
+      },
+      {
+        name: 'NA',
+        title: 'Nazar\'s Memories',
+        storages: [
+          'bgimage/NA1.webp',
+          'bgimage/NA2.webp',
+          'bgimage/NA3.webp',
+          'bgimage/NA4.webp',
+          'bgimage/NA5.webp',
+          'bgimage/NA6.webp',
+          'bgimage/NA7.webp',
+          'bgimage/NA8.webp',
+          'bgimage/NA9.webp',
+          'bgimage/NA10.webp',
+          'bgimage/NA11.webp',
+          'bgimage/NA14.webp',
+          'bgimage/NA12.webp',
+          'bgimage/NA13.webp',
+        ],
+      },
+      {
+        name: 'yume',
+        title: 'Dreaming Summoner',
+        storages: [
+          'bgimage/yume1.webp',
+          'bgimage/yume2.webp',
+          'bgimage/yume3.webp',
+          'bgimage/yume4.webp',
+          'bgimage/yume5.webp',
+          'bgimage/yume6.webp',
+          'bgimage/yume7.webp',
+          'bgimage/yume11.webp',
+          'bgimage/yume9.webp',
+          'bgimage/yume10.webp',
+          'bgimage/yume12.webp',
+          'bgimage/yume13.webp',
+          'bgimage/yume14.webp',
+        ],
+      },
+      {
+        name: 'ma',
+        title: 'Maneko\'s Past 1',
+        storages: [
+          'bgimage/ma1.webp',
+          'bgimage/ma6.webp',
+          'bgimage/ma7.webp',
+          'bgimage/ma2.webp',
+          'bgimage/ma3.webp',
+          'bgimage/ma4.webp',
+          'bgimage/ma5.webp',
+        ],
+      },
+      {
+        name: 'D',
+        title: 'Lucifer the Fallen Angel',
+        storages: ['bgimage/D1.webp', 'bgimage/D2.webp', 'bgimage/D3.webp'],
+      },
+      {
+        name: 'pa',
+        title: 'Pajama Party',
+        storages: ['bgimage/pa1.webp', 'bgimage/pa2.webp', 'bgimage/pa3.webp'],
+      },
+      {
+        name: 'geki',
+        title: 'Kupya-D\'gyah Theater SP',
+        storages: [
+          'bgimage/geki1.webp',
+          'bgimage/geki2.webp',
+          'bgimage/geki3.webp',
+        ],
+      },
+      {
+        name: 'debi',
+        title: 'Devilun\'s Dream',
+        storages: [
+          'bgimage/debi1.webp',
+          'bgimage/debi2.webp',
+          'bgimage/debi3.webp',
+          'bgimage/debi4.webp',
+          'bgimage/debi5.webp',
+          'bgimage/debi6.webp',
+          'bgimage/debi7.webp',
+        ],
+      },
+      {
+        name: 'NISU',
+        title: 'In the Fallen Paradise...',
+        storages: [
+          'bgimage/NISU1.webp',
+          'bgimage/NISU2.webp',
+          'bgimage/NISU3.webp',
+          'bgimage/NISU4.webp',
+          'bgimage/NISU5.webp',
+          'bgimage/NISU6.webp',
+          'bgimage/NISU7.webp',
+          'bgimage/NISU8.webp',
+          'bgimage/NISU8_.webp',
+          'bgimage/NISU9.webp',
+          'bgimage/NISU10.webp',
+          'bgimage/NISU11.webp',
+          'bgimage/NISU12.webp',
+          'bgimage/NISU13.webp',
+        ],
+      },
+      {
+        name: 'amo',
+        title: 'Amo and Luci',
+        storages: [
+          'bgimage/amo1.webp',
+          'bgimage/amo2.webp',
+          'bgimage/amo3.webp',
+          'bgimage/amo4.webp',
+          'bgimage/amo5.webp',
+          'bgimage/amo6.webp',
+          'bgimage/amo7.webp',
+          'bgimage/amo8.webp',
+          'bgimage/amo9.webp',
+          'bgimage/amo10.webp',
+        ],
+      },
+      {
+        name: 'mane',
+        title: 'Maneko\'s Past',
+        storages: [
+          'bgimage/mane1.webp',
+          'bgimage/mane2.webp',
+          'bgimage/mane3.webp',
+          'bgimage/mane4.webp',
+          'bgimage/mane5.webp',
+          'bgimage/mane6.webp',
+          'bgimage/mane7.webp',
+        ],
+      },
+      {
+        name: 'DR',
+        title: 'D. Red\'s Return',
+        storages: [
+          'bgimage/DR1.webp',
+          'bgimage/DR2.webp',
+          'bgimage/DR3.webp',
+          'bgimage/DR4.webp',
+          'bgimage/DR5.webp',
+          'bgimage/DR6.webp',
+          'bgimage/DR7.webp',
+          'bgimage/DR8.webp',
+          'bgimage/DR9.webp',
+          'bgimage/DR10.webp',
+          'bgimage/DR11.webp',
+          'bgimage/DR12.webp',
+          'bgimage/DR13.webp',
+        ],
+      },
+      {
+        name: 'BBB',
+        title: 'Bub\'s Invitation',
+        storages: [
+          'bgimage/B1.webp',
+          'bgimage/B2.webp',
+          'bgimage/B3.webp',
+          'bgimage/B4.webp',
+          'bgimage/B5.webp',
+          'bgimage/B6.webp',
+          'bgimage/B7.webp',
+          'bgimage/B8.webp',
+          'bgimage/B9.webp',
+          'bgimage/B10.webp',
+          'bgimage/B11.webp',
+          'bgimage/B12.webp',
+          'bgimage/B13.webp',
+          'bgimage/B14.webp',
+          'bgimage/B15.webp',
+        ],
+      },
+    ]
+    return data.slice(start, start + len)
+  },
+  /**
+   * name: 一意な名前（解禁に使う）
+   * title: タイトル（解禁後に表示される）
+   * cond: 解禁条件（解禁前に表示される）
+   * storage: オマケシナリオのファイル名（.ksなし）
+   */
+  ngSceneData: (start = 0, len = Number.MAX_SAFE_INTEGER) => {
+    const data = [
+      {
+        name: 'geki',
+        title: 'Kupya-D\'gyah Theater SP',
+        cond: 'Complete the Kupya-D\'gyah Theater to unlock.',
+        storage: 'omake_geki',
+      },
+      {
+        name: 'yume_kupya',
+        title: 'That Night... Kupyadoel\'s Dream(?)',
+        cond: 'Complete all endings to unlock.',
+        storage: 'omake_yume_kupya',
+      },
+      {
+        name: 'yume_debi',
+        title: 'That Night... Devilun\'s Dream',
+        cond: 'Complete all character profiles to unlock.',
+        storage: 'omake_yume_debi',
+      },
+      {
+        name: 'neodebi',
+        title: 'Outtake - Enhanced Senses...?!',
+        cond: 'Gather 6666% or more mana to unlock.',
+        storage: 'omake_neodebi',
+      },
+      {
+        name: 'koumori',
+        title: 'Epilogue - Present',
+        cond: 'Finish the True Ending to unlock.',
+        storage: 'omake_koumori',
+      },
+      {
+        name: 'BBB',
+        title: 'Backstory - In the Fallen Paradise...',
+        cond: 'Finish the Epilogue to unlock.',
+        storage: 'omake_BBB',
+      },
+      {
+        name: 'amo',
+        title: 'That Night... Amo and Luci',
+        cond: 'Finish the Epilogue to unlock.',
+        storage: 'omake_amo',
+      },
+      {
+        name: 'naza',
+        title: 'That Night... Devi and Levi',
+        cond: 'Finish the Epilogue to unlock.',
+        storage: 'omake_nazar',
+      },
+      {
+        name: 'mane',
+        title: 'Backstory - Maneko\'s Past',
+        cond: 'Finish the Epilogue to unlock.',
+        storage: 'omake_maneko',
+      },
+      {
+        name: 'DR',
+        title: 'That Night... D. Red\'s Return',
+        cond: 'Finish the Epilogue to unlock.',
+        storage: 'omake_DRED',
+      },
+      {
+        name: 'hade',
+        title: 'Outtake - Couldn\'t Wait...',
+        cond: 'Finish the Epilogue to unlock.',
+        storage: 'omake_Hardester',
+      },
+      {
+        name: 'debi',
+        title: 'Backstory - Bub\'s Invitation',
+        cond: 'Finish the Epilogue to unlock.',
+        storage: 'omake_debi',
+      },
+    ]
+    return data
+      .concat(TYRANO.kag.dc.additionalNgSceneData())
+      .slice(start, start + len)
+  },
+  additionalNgSceneData: () => [],
+}
+
+TYRANO.kag.variable.sf.gallery || (TYRANO.kag.variable.sf.gallery = [])
+TYRANO.kag.variable.sf.ngScene || (TYRANO.kag.variable.sf.ngScene = [])
+

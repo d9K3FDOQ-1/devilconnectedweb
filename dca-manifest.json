@@ -1,0 +1,202 @@
+{
+  "format": "dca",
+  "version": 1,
+  "game": "Devil Connection",
+  "credit": "не вайбкод, всё сам",
+  "contact": "https://t.me/oodze",
+  "play": "play.html",
+  "cdnBase": "https://pub-f84055bf661a408ea50c34e77905b424.r2.dev/dca/",
+  "maxMb": 350.0,
+  "totalBytes": 6776311268,
+  "packs": [
+    {
+      "id": "fgimage-01",
+      "file": "fgimage-01.dca",
+      "bytes": 367018946,
+      "crc32": "52bd5c03",
+      "files": 357,
+      "payloadBytes": 366992655,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-02",
+      "file": "fgimage-02.dca",
+      "bytes": 366183757,
+      "crc32": "d4729c51",
+      "files": 206,
+      "payloadBytes": 366168408,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-03",
+      "file": "fgimage-03.dca",
+      "bytes": 366374759,
+      "crc32": "cec33764",
+      "files": 275,
+      "payloadBytes": 366354416,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-04",
+      "file": "fgimage-04.dca",
+      "bytes": 365215428,
+      "crc32": "21a12492",
+      "files": 137,
+      "payloadBytes": 365205137,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-05",
+      "file": "fgimage-05.dca",
+      "bytes": 365384512,
+      "crc32": "0b6b6a43",
+      "files": 119,
+      "payloadBytes": 365375650,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-06",
+      "file": "fgimage-06.dca",
+      "bytes": 364699924,
+      "crc32": "783c73fa",
+      "files": 152,
+      "payloadBytes": 364688693,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-07",
+      "file": "fgimage-07.dca",
+      "bytes": 366558973,
+      "crc32": "1028df09",
+      "files": 125,
+      "payloadBytes": 366549700,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-08",
+      "file": "fgimage-08.dca",
+      "bytes": 366955330,
+      "crc32": "418bde11",
+      "files": 155,
+      "payloadBytes": 366943877,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-09",
+      "file": "fgimage-09.dca",
+      "bytes": 359957738,
+      "crc32": "0acde54e",
+      "files": 35,
+      "payloadBytes": 359955085,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-10",
+      "file": "fgimage-10.dca",
+      "bytes": 365158556,
+      "crc32": "f59e16f7",
+      "files": 113,
+      "payloadBytes": 365150186,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-11",
+      "file": "fgimage-11.dca",
+      "bytes": 365955262,
+      "crc32": "d3273a17",
+      "files": 50,
+      "payloadBytes": 365951476,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-12",
+      "file": "fgimage-12.dca",
+      "bytes": 361722572,
+      "crc32": "81515920",
+      "files": 85,
+      "payloadBytes": 361716200,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-13",
+      "file": "fgimage-13.dca",
+      "bytes": 361532098,
+      "crc32": "4ba1e197",
+      "files": 121,
+      "payloadBytes": 361523124,
+      "hint": "fgimage"
+    },
+    {
+      "id": "fgimage-14",
+      "file": "fgimage-14.dca",
+      "bytes": 252786730,
+      "crc32": "47a772a0",
+      "files": 63,
+      "payloadBytes": 252781450,
+      "hint": "fgimage"
+    },
+    {
+      "id": "image-01",
+      "file": "image-01.dca",
+      "bytes": 365650749,
+      "crc32": "74d06cc9",
+      "files": 395,
+      "payloadBytes": 365616274,
+      "hint": "image"
+    },
+    {
+      "id": "image-02",
+      "file": "image-02.dca",
+      "bytes": 260885603,
+      "crc32": "82e20646",
+      "files": 473,
+      "payloadBytes": 260850188,
+      "hint": "image"
+    },
+    {
+      "id": "bgimage-01",
+      "file": "bgimage-01.dca",
+      "bytes": 364998988,
+      "crc32": "f6ec2269",
+      "files": 219,
+      "payloadBytes": 364983920,
+      "hint": "bgimage"
+    },
+    {
+      "id": "bgimage-02",
+      "file": "bgimage-02.dca",
+      "bytes": 259385988,
+      "crc32": "7f96f770",
+      "files": 133,
+      "payloadBytes": 259376668,
+      "hint": "bgimage"
+    },
+    {
+      "id": "bgm",
+      "file": "bgm.dca",
+      "bytes": 291067126,
+      "crc32": "a29c01c8",
+      "files": 55,
+      "payloadBytes": 291063073,
+      "hint": "bgm"
+    },
+    {
+      "id": "video",
+      "file": "video.dca",
+      "bytes": 137976782,
+      "crc32": "4353879c",
+      "files": 47,
+      "payloadBytes": 137973562,
+      "hint": "video"
+    },
+    {
+      "id": "sound",
+      "file": "sound.dca",
+      "bytes": 100841447,
+      "crc32": "de55a0a0",
+      "files": 505,
+      "payloadBytes": 100808649,
+      "hint": "sound"
+    }
+  ]
+}
