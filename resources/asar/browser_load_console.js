@@ -227,7 +227,17 @@
 
     const root = document.createElement('div')
     root.id = 'browser-load-console'
-    root.innerHTML = ``
+    root.innerHTML = `
+      <div id="blc-head">
+        <span id="blc-title">Загрузка Devil Connection</span>
+        <button type="button" class="blc-btn" id="blc-min">−</button>
+        <button type="button" class="blc-btn" id="blc-hide">×</button>
+      </div>
+      <div id="blc-track"><div id="blc-bar"></div></div>
+      <div id="blc-step">…</div>
+      <div id="blc-stats"></div>
+      <div id="blc-log"></div>
+    `
     document.body.appendChild(root)
 
     const splash = document.createElement('div')
@@ -237,7 +247,8 @@
         <div class="blc-splash-spin">
           <img class="blc-splash-img" src="./data/image/splash_spin.jpg" alt="" />
         </div>
-        <div class="blc-splash-1">loading</div>
+        <div class="blc-splash-1">POWERED BY CURSOR<span class="blc-check">✅</span></div>
+        <div class="blc-splash-2">ВСЕ САМ НЕ НЕЙРОСЕТЬ</div>
       </div>
     `
     document.body.appendChild(splash)
