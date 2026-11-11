@@ -84,10 +84,10 @@
       left.textContent = pack.file + '  ·  ' + fmtMb(pack.bytes)
       var right = document.createElement('span')
       if (installed[pack.id]) {
-        right.textContent = 'готово'
-        right.className = 'ok'
+        right.textContent = '✅'
+        right.className = '?'
       } else {
-        right.textContent = 'нет'
+        right.textContent = '❌'
       }
       li.appendChild(left)
       li.appendChild(right)
@@ -183,7 +183,7 @@
     await writable.close()
 
     if (got !== pack.bytes) {
-      throw new Error(pack.file + ': размер ' + got + ' != ' + pack.bytes)
+      throw new Error(pack.file + ': size ' + got + ' != ' + pack.bytes)
     }
 
     var finished = await (await dir.getFileHandle(partName)).getFile()
@@ -191,7 +191,7 @@
       var crc = await crcFile(finished)
       if (DCA.hex8(crc) !== pack.crc32) {
         await dir.removeEntry(partName)
-        throw new Error(pack.file + ': CRC32 не совпал (ожидали ' + pack.crc32 + ')')
+        throw new Error(pack.file + ': broken asset ( ' + pack.crc32 + ')')
       }
     }
 
@@ -228,7 +228,7 @@
 
   async function ensureSw() {
     if (!('serviceWorker' in navigator)) {
-      throw new Error('Нужен браузер с Service Worker (Chrome / Edge)')
+      throw new Error('use chromium browser')
     }
     var reg = await navigator.serviceWorker.register('./sw.js', { scope: './' })
     await navigator.serviceWorker.ready
@@ -256,7 +256,7 @@
     var ready = await allReady()
     $('play').disabled = !ready
     $('download').disabled = ready || state.busy
-    if (ready) setStatus('Архивы на месте. Можно играть.')
+    if (ready) setStatus('assets ready')
     return ready
   }
 
@@ -278,14 +278,14 @@
       for (var i = 0; i < state.manifest.packs.length; i++) {
         var pack = state.manifest.packs[i]
         if (installed[pack.id]) continue
-        setStatus('Качаю ' + pack.file + ' …')
+        setStatus('downloading ' + pack.file + ' …')
         await downloadPack(pack, function (ratio, got) {
           var overall = (doneBytes + got) / total
           setBar('pack', ratio)
           setBar('total', overall)
           setStatus(
             pack.file + '  ' + fmtMb(got) + ' / ' + fmtMb(pack.bytes) +
-              '   ·   всего ' + fmtMb(doneBytes + got) + ' / ' + fmtMb(total)
+              '   ·   total ' + fmtMb(doneBytes + got) + ' / ' + fmtMb(total)
           )
         })
         doneBytes += pack.bytes
@@ -293,11 +293,11 @@
         setBar('total', doneBytes / total)
       }
 
-      setStatus('Собираю индекс файлов…')
+      setStatus('')
       await buildIndex()
       await ensureSw()
       await refresh()
-      setStatus('Готово. Жми Играть.')
+      setStatus('Done! You can play now')
     } catch (err) {
       console.error(err)
       setStatus(String(err && err.message ? err.message : err), true)
@@ -315,19 +315,19 @@
   }
 
   async function wipe() {
-    if (!confirm('Снести скачанные .dca с этого браузера?')) return
+    if (!confirm('you really need delete assets from cache?')) return
     var dir = await packsDir()
     for await (var entry of dir.values()) {
       await dir.removeEntry(entry.name, { recursive: true })
     }
     await idbPut('meta', 'index', {})
     await refresh()
-    setStatus('Кэш очищен.')
+    setStatus('done')
   }
 
   async function init() {
     var res = await fetch('./dca-manifest.json', { cache: 'no-store' })
-    if (!res.ok) throw new Error('Не нашёл dca-manifest.json')
+    if (!res.ok) throw new Error('err. incorrect dca-manifest.json')
     state.manifest = await res.json()
     var saved = ''
     try {
@@ -336,7 +336,7 @@
     $('cdn').value = saved || state.manifest.cdnBase || ''
     $('total-label').textContent =
       (state.manifest.packs || []).length +
-      ' архивов · ' +
+      ' archives · ' +
       fmtMb(state.manifest.totalBytes || 0)
     await ensureSw().catch(function () {})
     await refresh()
